@@ -66,7 +66,18 @@ SSH into one of your EC2 instances
 Run a stress test :
 
 ```
-sudo yum install -y stress
+# 1. Install EPEL (Extra Packages for Enterprise Linux)
+sudo amazon-linux-extras install epel -y
+
+# 2. Now install stress
+sudo yum install stress -y
+stress --version
+```
+
+
+This will push CPU usage and should trigger your Auto Scaling policy if it's configured to scale based on CPU.
+
+```
 stress --cpu 2 --timeout 300
 ```
 
