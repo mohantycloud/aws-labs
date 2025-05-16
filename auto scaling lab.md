@@ -22,7 +22,20 @@ yum update -y
 yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
-echo "Welcome to Auto Scaling Hands-on" > /var/www/html/index.html
+
+cat <<EOF > /var/www/html/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Scaling Hands-on</title>
+</head>
+<body>
+    <h1>Welcome to the Auto Scaling Session</h1>
+    <p>This page was deployed using a user data script.</p>
+</body>
+</html>
+EOF
+
 ```
 
   - Click Create launch template
