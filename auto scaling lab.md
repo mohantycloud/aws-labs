@@ -41,7 +41,7 @@ Click Create Auto Scaling group
   - Choose network : Select a VPC and at least 2 subnets in different Availability Zones
   - Configure group size and scaling policies :
 
-      - Desired capacity: 2
+      - Desired capacity: 1
       - Minimum capacity: 1
       - Maximum capacity: 4
 
